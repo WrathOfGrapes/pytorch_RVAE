@@ -31,9 +31,9 @@ class Encoder(nn.Module):
         input = input.view(-1, embed_size)
         input = self.hw1(input)
         input = input.view(batch_size, seq_len, embed_size)
-
-        assert parameters_allocation_check(self), \
-            'Invalid CUDA options. Parameters should be allocated in the same memory'
+        # Raises unwanted error, therefor commented. Issue: https://github.com/kefirski/pytorch_RVAE/issues/5
+        # assert parameters_allocation_check(self), \
+        #     'Invalid CUDA options. Parameters should be allocated in the same memory'
 
         ''' Unfold rnn with zero initial state and get its final state from the last layer
         '''

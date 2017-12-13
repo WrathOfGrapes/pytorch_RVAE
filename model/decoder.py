@@ -29,10 +29,12 @@ class Decoder(nn.Module):
                     with shape of [batch_size, seq_len, word_vocab_size]
                  final rnn state with shape of [num_layers, batch_size, decoder_rnn_size]
         """
-
-        assert parameters_allocation_check(self), \
-            'Invalid CUDA options. Parameters should be allocated in the same memory'
-
+	
+        # Raises unwanted error, therefor commented. Issue: https://github.com/kefirski/pytorch_RVAE/issues/5
+	#
+        # assert parameters_allocation_check(self), \
+        #     'Invalid CUDA options. Parameters should be allocated in the same memory'
+	
         [batch_size, seq_len, _] = decoder_input.size()
 
         '''
