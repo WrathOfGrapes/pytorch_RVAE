@@ -1,3 +1,9 @@
+This repository is forked from https://github.com/kefirski/pytorch_RVAE.
+It uses advices from https://github.com/kefirski/pytorch_RVAE/issues, to fix some issues that made original code run with  runtime errors.
+
+<b>It is strongly recommended to use libraries from requirements.txt, because the issue with the original repository probably lied in using outdated versions of modules without specifing them explicitly. </b>
+
+
 # Pytorch Recurrent Variational Autoencoder 
 
 ## Model:
